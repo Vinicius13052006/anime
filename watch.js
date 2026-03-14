@@ -9,7 +9,7 @@ const animes = [
   {title:"Solo Leveling", desc:"Sung Jin-Woo ganha poderes incríveis em masmorras perigosas.", img:"71goH8p2ENL._SL1500_.jpg", episodes:7},
   {title:"Tokyo Ghoul", desc:"Kaneki luta para sobreviver em um mundo de ghouls.", img:"tokyoghoul.jpeg", episodes:5},
   {title:"Jujutsu Kaisen", desc:"Yuji e amigos enfrentam maldições perigosas.", img:"the-jujutsu-kaisen-5k-k0.jpg", episodes:6},
-  {title:"Your Name", desc:"Dois adolescentes trocam de corpo misteriosamente.", img:"iyour-name-anime-2016-movie-poster-mlwlcbx1run1k2u9.jpg", episodes:3},
+  {title:"Your Name", desc:"Dois adolescentes trocam de corpo misteriosamente.", img:"your-name-anime-2016-movie-poster-mlwlcbx1run1k2u9.jpg", episodes:3},
   {title:"Horimiya", desc:"A história do amor entre Hori e Miyamura.", img:"Horimiya-The-Missing-Pieces-Novo-trailer-revela-a-data-de-estreia-do-anime-1-jpg.webp", episodes:4},
   {title:"Toradora", desc:"O romance entre Taiga e Ryuuji.", img:"toradora.webp", episodes:4},
   {title:"A Silent Voice", desc:"Shouya busca redenção e amizade.", img:"wp6234232.jpg", episodes:3},
