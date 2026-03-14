@@ -1,0 +1,260 @@
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+body{
+  background:#0a0a0a;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 60px;
+  background:rgba(10,10,10,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1f1f1f;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+header h1{
+  color:#ff6a00;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+
+#search{
+  padding:10px 16px;
+  border:none;
+  border-radius:10px;
+  background:#1a1a1a;
+  color:white;
+  outline:none;
+  width:240px;
+  transition:0.3s;
+}
+
+#search:focus{
+  box-shadow:0 0 14px #ff6a00;
+}
+
+/* ================= BANNER ================= */
+.banner{
+  height:520px;
+  background: linear-gradient(to right,rgba(0,0,0,0.95),rgba(0,0,0,0.2)), url("anime01.webp");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding:80px;
+  position:relative;
+  transition: background 1s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.banner-content{
+  max-width:520px;
+}
+
+.banner-content h2{
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.banner-content p{
+  margin:15px 0 25px;
+  color:#ccc;
+  font-size:17px;
+  line-height:1.4;
+}
+
+.banner-content button{
+  padding:14px 32px;
+  border:none;
+  background:#ff6a00;
+  color:white;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.banner-content button:hover{
+  background:#ff7d1a;
+  transform:scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+.title{
+  margin:50px 60px 15px;
+  font-size:24px;
+  font-weight:700;
+}
+
+/* ================= GRID DE ANIMES ================= */
+.anime-grid{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  padding:20px 60px;
+  scroll-behavior:smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.anime-grid::-webkit-scrollbar{
+  height:8px;
+}
+
+.anime-grid::-webkit-scrollbar-thumb{
+  background:#ff6a00;
+  border-radius:8px;
+}
+
+.anime-grid::-webkit-scrollbar-track{
+  background:#111;
+}
+
+/* ================= CARD DE ANIMES ================= */
+.anime-card{
+  min-width:160px;
+  background:#111;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  transition:transform 0.3s, box-shadow 0.3s;
+  scroll-snap-align:start;
+}
+
+.anime-card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:12px;
+  transition:transform 0.3s, filter 0.3s;
+}
+
+.anime-card h3{
+  padding:12px;
+  font-size:15px;
+  font-weight:500;
+}
+
+/* HOVER DISCRETO */
+.anime-card:hover{
+  transform:scale(1.07);
+  box-shadow:0 12px 25px rgba(0,0,0,0.7);
+}
+
+.anime-card:hover img{
+  filter:brightness(0.8);
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* Tablets e telas médias */
+@media(max-width:1024px){
+  header {
+    padding:18px 25px;
+  }
+
+  .banner {
+    padding:50px 30px;
+    height:45vh; /* Altura proporcional à tela */
+  }
+
+  .banner-content h2 {
+    font-size:clamp(28px, 4vw, 40px); /* Tamanho fluido */
+  }
+
+  .banner-content p {
+    font-size:clamp(14px, 2.5vw, 18px);
+  }
+
+  .anime-grid {
+    padding:20px 25px;
+    gap:12px;
+  }
+
+  .anime-card {
+    min-width:150px;
+  }
+
+  .anime-card img {
+    height:200px;
+  }
+}
+
+/* Smartphones pequenos */
+@media(max-width:600px){
+  header {
+    padding:15px 15px;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .banner {
+    padding:30px 15px;
+    height:40vh;
+  }
+
+  .banner-content h2 {
+    font-size:clamp(22px, 5vw, 30px);
+  }
+
+  .banner-content p {
+    font-size:clamp(12px, 3vw, 16px);
+  }
+
+  .anime-grid {
+    padding:15px 15px;
+    gap:10px;
+  }
+
+  .anime-card {
+    min-width:130px;
+  }
+
+  .anime-card img {
+    height:160px;
+    border-radius:8px;
+  }
+
+  .anime-card h3 {
+    font-size:12px;
+    padding:6px 4px;
+  }
+}
+
+/* Ultra pequenos (smartphones antigos ou orientações landscape) */
+@media(max-width:400px){
+  .banner-content h2 {
+    font-size:clamp(20px, 5vw, 26px);
+  }
+
+  .banner-content p {
+    font-size:clamp(10px, 3.5vw, 14px);
+  }
+
+  .anime-card {
+    min-width:120px;
+  }
+
+  .anime-card img {
+    height:140px;
+  }
+
+  .anime-card h3 {
+    font-size:11px;
+  }
+}
