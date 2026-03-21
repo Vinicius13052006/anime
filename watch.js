@@ -42,6 +42,7 @@ for (let i = 1; i <= anime.episodes; i++) {
     <img src="${anime.img}" alt="Episódio ${i}">
     <p>Episódio ${i}</p>
   `;
-  epCard.onclick = () => alert(`▶ em breve `);
+  epCard.onclick = () => alert(`▶ Devido a direitos autorais, os episódios completos não são exibidos.
+O objetivo do projeto é demonstrar a interface e funcionalidades de um serviço de streaming. `);
   episodesGrid.appendChild(epCard);
 }
