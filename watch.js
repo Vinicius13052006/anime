@@ -30,7 +30,8 @@ document.getElementById("watchBanner").style.backgroundImage =
 
 // Botão "Assistir Agora"
 document.getElementById("watchNow").onclick = () => {
-  alert(`▶ em breve`);
+  alert(`▶ Devido a direitos autorais, os episódios completos não são exibidos.
+O objetivo do projeto é demonstrar a interface e funcionalidades de um serviço de streaming.`);
 };
 
 // Carrega episódios simulados
@@ -43,6 +44,6 @@ for (let i = 1; i <= anime.episodes; i++) {
     <p>Episódio ${i}</p>
   `;
   epCard.onclick = () => alert(`▶ Devido a direitos autorais, os episódios completos não são exibidos.
-O objetivo do projeto é demonstrar a interface e funcionalidades de um serviço de streaming. `);
+O objetivo do projeto é demonstrar a interface e funcionalidades de um serviço de streaming.`);
   episodesGrid.appendChild(epCard);
 }
