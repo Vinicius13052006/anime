@@ -14,7 +14,7 @@ Atualmente o player está funcionando para os seguintes animes:
 
 * Eighty Six (86)
 * Demon Slayer
-* Kaiju No. 8
+* sword art online
 * Darling in the Franxx
 
 Esses foram mantidos apenas para demonstrar o funcionamento do **sistema de player e navegação entre episódios**.
