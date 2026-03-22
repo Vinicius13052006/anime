@@ -12,6 +12,7 @@ const animes = [
   {title:"Your Name", desc:"Dois adolescentes trocam de corpo misteriosamente.", img:"your-name-anime-2016-movie-poster-mlwlcbx1run1k2u9.jpg", episodes:1},
   {title:"Horimiya", desc:"A história do amor entre Hori e Miyamura.", img:"Horimiya-The-Missing-Pieces-Novo-trailer-revela-a-data-de-estreia-do-anime-1-jpg.webp", episodes:4},
   {title:"Toradora", desc:"O romance entre Taiga e Ryuuji.", img:"toradora.webp", episodes:4},
+   {title:"A Silent Voice", desc:"O romance entre Nishimiya Shoko e Ishida Shoya .", img:"wp6234232.jpg", episodes:4},
 ];
 
 // Pega o anime clicado
