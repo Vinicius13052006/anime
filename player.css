@@ -1,0 +1,86 @@
+:root {
+    --netflix-red: #e50914;
+    --netflix-black: #080808;
+    --ease-netflix: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--netflix-black);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fundo com efeito de profundidade */
+.cinema-vignette {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%), url("anime01.webp") center/cover;
+    filter: blur(15px) brightness(0.3);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 0; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 25px 4%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 100;
+}
+
+.logo { color: var(--netflix-red); font-size: 1.8rem; font-weight: 900; text-transform: uppercase; }
+
+.back-button { 
+    display: flex; align-items: center; gap: 8px; 
+    color: #fff; text-decoration: none; font-weight: 600; 
+    transition: 0.3s;
+}
+.back-button:hover { color: var(--netflix-red); transform: translateX(-5px); }
+
+/* Centralização do Player */
+.player-wrapper {
+    display: flex; justify-content: center; align-items: center;
+    width: 100vw; height: 100vh;
+}
+
+.video-scene { width: 90%; max-width: 1100px; }
+
+.player-container {
+    position: relative;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 30px 100px rgba(0,0,0,0.8);
+    animation: netflixIntro 1s var(--ease-netflix);
+}
+
+video { width: 100%; display: block; aspect-ratio: 16/9; outline: none; }
+
+/* Sombra que não bloqueia o clique */
+.video-shadow-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none; /* PERMITE CLICAR NO VÍDEO */
+    z-index: 1;
+}
+
+/* Loader Giratório */
+.video-loader {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; height: 50px;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top-color: var(--netflix-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes netflixIntro { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
